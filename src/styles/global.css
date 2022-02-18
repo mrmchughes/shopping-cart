@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.navBar {
+  border: 1px solid purple;
+}
+
+.homePageContainer {
+}
+
+.homePage {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.shopPage {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cartPage {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
