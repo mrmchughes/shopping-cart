@@ -1,12 +1,12 @@
 import React from "react";
-import NavBar from "./NavBar";
 
 const HomePage = () => {
   return (
     <div className="homePageContainer">
-      <NavBar />
-      <div className="homePage">
+      <div className="homePageHeader">
         <h2>The Invulnerable Vagrant</h2>
+      </div>
+      <div className="homePageBrowse">
         <a href="http://localhost:3000/shopPage">Browse Our Wares</a>
       </div>
     </div>

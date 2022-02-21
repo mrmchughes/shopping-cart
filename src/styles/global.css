@@ -2,26 +2,52 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fffcff;
+}
+
+a {
+  text-align: center;
+  color: black;
+}
+
 .navBar {
-  border: 1px solid purple;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.navBar .logoLink {
+  float: left;
+}
+
+.navBar .navBarRight {
+  float: right;
 }
 
 .homePageContainer {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+
+  grid-template-areas:
+    ". . . . ."
+    ". . . . ."
+    ". homePageHeader homePageHeader homePageHeader ."
+    ". homePageBrowse homePageBrowse homePageBrowse ."
+    ". . . . .";
+
+  text-align: center;
+  color: black;
 }
 
-.homePage {
-  border: 1px solid red;
+.homePageHeader {
+  grid-area: homePageHeader;
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.homePageBrowse {
+  grid-area: homePageBrowse;
 }
 
 .shopPage {
-  border: 1px solid red;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,8 +56,6 @@
 }
 
 .cartPage {
-  border: 1px solid red;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

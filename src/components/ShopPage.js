@@ -1,11 +1,20 @@
 import React from "react";
-import NavBar from "./NavBar";
+import { Link, Outlet } from "react-router-dom";
+import { getProducts } from "../products";
 
 const ShopPage = () => {
+  let products = getProducts();
+
   return (
-    <div className="shopPage">
-      <NavBar />
-      <h2>Hello from ShopPage</h2>
+    <div className="shopPageContainer">
+      <nav>
+        {products.map((product) => (
+          <Link to={`/products/${product.name}`} key={product.name}>
+            {product.name}
+          </Link>
+        ))}
+      </nav>
+      <Outlet />
     </div>
   );
 };
