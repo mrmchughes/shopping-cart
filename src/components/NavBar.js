@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const [numberOfProducts, setNumberOfProducts] = useState(0);
+
   return (
     <div className="navBar">
       <nav>
@@ -10,8 +12,9 @@ const NavBar = () => {
         </div>
 
         <div className="navBarRight">
-          <Link to="/">Home</Link> | <Link to="/shopPage">Shop Page</Link> |{" "}
-          <Link to="/cartPage">Cart Page (0)</Link>
+          <Link to="/">Home</Link> |{" "}
+          <Link to="/shopPage">Shop Page ({numberOfProducts})</Link> |{" "}
+          <Link to="/contactPage">Contact</Link>
         </div>
       </nav>
     </div>

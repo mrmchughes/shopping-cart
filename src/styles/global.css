@@ -47,12 +47,42 @@ a {
   grid-area: homePageBrowse;
 }
 
-.shopPage {
+.shopPageContainer {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  gap: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
+  text-align: center;
+
+  width: 250px;
+  height: 250px;
+
+  font-size: 0.85rem;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3;
+  border-radius: 5px;
+  border: 1px solid #247ba0;
+
+  background-color: grey;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 #424242;
+}
+
+.card img {
+  width: 225px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .cartPage {
