@@ -1,23 +1,7 @@
-import React, { useState } from "react";
-import productsArray from "./productsArray";
-import ProductCardMaker from "./ProductCardMaker";
+import React from "react";
 
-const ShopPage = () => {
-  const [cart, setCart] = useState([]);
-  //cart number updates based off number of items in the cart
-  //send cart numbers to NavBar?
-
-  //const addToCart = () => {}
-
-  //const deleteFromCart = () => {}
-
-  //handleClick needs to account for duplicate items in the cart
-  //if an item is already in the cart, then add another of the same item to the cart
-  const handleClick = (product) => {
-    if (!cart.includes(product.name)) {
-      setCart((cart) => [...cart, product]);
-    }
-  };
+const ShopPage = (props) => {
+  const { productsArray, ProductCardMaker, handleProductClick } = props;
 
   return (
     <div className="shopPageContainer">
@@ -29,6 +13,7 @@ const ShopPage = () => {
               alt={product.alt}
               name={product.name}
               price={product.price}
+              handleProductClick={handleProductClick}
             />
           </div>
         );

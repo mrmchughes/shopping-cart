@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
-  const [numberOfProducts, setNumberOfProducts] = useState(0);
+const NavBar = (props) => {
+  const { numberOfProducts } = props;
 
   return (
     <div className="navBar">
