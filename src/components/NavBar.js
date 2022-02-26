@@ -1,8 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+//import uniqid from "uniqid";
 
 const NavBar = (props) => {
-  const { numberOfProducts } = props;
+  const {
+    cart,
+    numberOfProducts,
+    totalPrice,
+    incrementProduct,
+    decrementProduct,
+  } = props;
 
   return (
     <div className="navBar">
@@ -17,6 +24,23 @@ const NavBar = (props) => {
           <Link to="/contactPage">Contact</Link>
         </div>
       </nav>
+
+      <div className="cartContainer">
+        {cart.map((product) => {
+          return (
+            <div key={product.id} className="cartItem">
+              <p>{product.name}</p> <p>{product.price}gp</p>
+              <button type="button" onClick={incrementProduct}>
+                +
+              </button>
+              <button type="button" onClick={decrementProduct}>
+                -
+              </button>
+            </div>
+          );
+        })}
+        <p>Your total is: {totalPrice}gp</p>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,9 @@
 import React from "react";
+import ProductCardMaker from "./ProductCardMaker";
+import productsArray from "./productsArray";
 
 const ShopPage = (props) => {
-  const { productsArray, ProductCardMaker, handleProductClick } = props;
+  const { addProductToCart } = props;
 
   return (
     <div className="shopPageContainer">
@@ -13,7 +15,7 @@ const ShopPage = (props) => {
               alt={product.alt}
               name={product.name}
               price={product.price}
-              handleProductClick={handleProductClick}
+              addProductToCart={addProductToCart.bind(this, product)}
             />
           </div>
         );

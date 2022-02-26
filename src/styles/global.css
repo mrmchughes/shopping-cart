@@ -24,6 +24,11 @@ a {
   float: right;
 }
 
+.cartContainer {
+  float: right;
+  border: 1px solid red;
+}
+
 .homePageContainer {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
