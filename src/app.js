@@ -1,39 +1,42 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-//import "./styles/reset.css";
 import "./styles/global.css";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
 import ShopPage from "./components/ShopPage";
-//import ShoppingCart from "./components/ShoppingCart";
+
 import ContactPage from "./components/ContactPage";
 
-//import productsArray from "./components/productsArray";
+import productsArray from "./components/productsArray";
 
 const App = () => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({
+    products: productsArray.map((product) => ({ ...product, quantity: 0 })),
+  });
 
-  const numberOfProducts = cart.reduce(
-    (sum, product) => sum + parseInt(product.quantity, 10),
-    0
-  );
+  const numberOfProducts = () =>
+    cart.products.reduce((sum, product) => sum + product.quantity, 0);
 
-  const totalPrice = cart.reduce(
-    (total, product) => total + product.quantity * parseInt(product.price, 10),
-    0
-  );
+  const totalPrice = () =>
+    cart.products.reduce(
+      (total, product) => total + product.quantity * product.price,
+      0
+    );
 
   const incrementProduct = (product) => {
     //setCart((cart) => [...cart, [product].quantity + 1])
 
-    setCart({ product: product.quantity + 1 });
+    //setCart({ product: product.quantity + 1 });
 
+    setCart({ ...product, quantity: +1 });
     //setCart(product.quantity + 1);
   };
 
-  const decrementProduct = () => {
-    setCart({ cart: cart.product.quantity - 1 });
+  const decrementProduct = (product) => {
+    //setCart({ cart: cart.product.quantity - 1 });
+
+    setCart({ ...product, quantity: -1 });
 
     //setCart(product.quantity - 1);
     //maybe base off of addProductToCart?
@@ -42,24 +45,24 @@ const App = () => {
   const addProductToCart = (product) => {
     console.log("cart includes " + cart);
 
-    if (!cart.includes(product)) {
-      setCart((cart) => [...cart, product]);
-      incrementProduct();
-    } else {
-      incrementProduct();
-    }
+    setCart([...cart, { product }]);
+
+    incrementProduct(product);
+
+    //if (!cart.includes(product)) {
+    //  setCart((cart) => [...cart, product]);
+    //  incrementProduct();
+    //} else {
+    //  incrementProduct();
+    //}
   };
 
-  //calculate price sum + product.quantity * product.price
-
-  //cart number updates based off number of items in the cart
-
   return (
-    <div>
+    <BrowserRouter>
       <NavBar
-        numberOfProducts={numberOfProducts}
-        totalPrice={totalPrice}
-        cart={cart}
+        numberOfProducts={numberOfProducts()}
+        totalPrice={totalPrice()}
+        products={cart.products}
         incrementProduct={incrementProduct}
         decrementProduct={decrementProduct}
       />{" "}
@@ -72,7 +75,7 @@ const App = () => {
         <Route path="/contactPage" element={<ContactPage />} />
         <Route path="*" element={<p>There's nothing here!</p>} />
       </Routes>
-    </div>
+    </BrowserRouter>
   );
 };
 
