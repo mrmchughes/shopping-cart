@@ -1,22 +1,25 @@
 import React from "react";
 import ProductCardMaker from "./ProductCardMaker";
-import productsArray from "./productsArray";
 
 const ShopPage = (props) => {
-  const { addProductToCart } = props;
+  const { productsArray, addProductToCart } = props;
 
   return (
     <div className="shopPageContainer">
       {productsArray.map((product) => {
         return (
-          <div key={product.id} className="gridItem">
-            <ProductCardMaker
-              image={product.image}
-              alt={product.alt}
-              name={product.name}
-              price={product.price}
-              addProductToCart={addProductToCart.bind(this, product)}
-            />
+          <div className="card" key={product.id}>
+            <img src={product.image} alt={product.alt}></img>
+
+            <p>{product.name}</p>
+            <p>{product.price}gp</p>
+
+            <button
+              type="button"
+              onClick={addProductToCart.bind(this, product)}
+            >
+              Add to Cart
+            </button>
           </div>
         );
       })}

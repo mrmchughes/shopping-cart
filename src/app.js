@@ -9,52 +9,56 @@ import ShopPage from "./components/ShopPage";
 import ContactPage from "./components/ContactPage";
 
 import productsArray from "./components/productsArray";
+import ProductCardMaker from "./components/ProductCardMaker";
 
 const App = () => {
-  const [cart, setCart] = useState({
-    products: productsArray.map((product) => ({ ...product, quantity: 0 })),
-  });
-
-  const numberOfProducts = () =>
-    cart.products.reduce((sum, product) => sum + product.quantity, 0);
-
-  const totalPrice = () =>
-    cart.products.reduce(
-      (total, product) => total + product.quantity * product.price,
-      0
-    );
+  const [cart, setCart] = useState([]);
 
   const incrementProduct = (product) => {
-    //setCart((cart) => [...cart, [product].quantity + 1])
-
-    //setCart({ product: product.quantity + 1 });
-
+    console.log(typeof cart);
     setCart({ ...product, quantity: +1 });
-    //setCart(product.quantity + 1);
   };
 
   const decrementProduct = (product) => {
-    //setCart({ cart: cart.product.quantity - 1 });
-
     setCart({ ...product, quantity: -1 });
+  };
 
-    //setCart(product.quantity - 1);
-    //maybe base off of addProductToCart?
+  //const cartProducts = cart.map((product) => {
+  //  return (
+  //    <div key={product.id} className="cartItem">
+  //      <p>
+  //        {product.name} ({product.quantity})
+  //      </p>{" "}
+  //      <p>{product.price}gp</p>
+  //      <button type="button" onClick={incrementProduct.bind(this, product)}>
+  //        +
+  //      </button>
+  //      <button type="button" onClick={decrementProduct.bind(this, product)}>
+  //        -
+  //      </button>
+  //    </div>
+  //  );
+  //});
+
+  const numberOfProducts = () => {
+    //cart.reduce((sum, product) => sum + product.quantity, 0);
+  };
+
+  const totalPrice = () => {
+    //cart.reduce(
+    //  (total, product) => total + product.quantity * product.price,
+    //  0
+    //);
   };
 
   const addProductToCart = (product) => {
-    console.log("cart includes " + cart);
+    const isItemInCart = cart.map((product) => product.id).includes(product.id);
 
-    setCart([...cart, { product }]);
-
-    incrementProduct(product);
-
-    //if (!cart.includes(product)) {
-    //  setCart((cart) => [...cart, product]);
-    //  incrementProduct();
-    //} else {
-    //  incrementProduct();
-    //}
+    if (isItemInCart) {
+      incrementProduct();
+    } else {
+      setCart([...cart, product]);
+    }
   };
 
   return (
@@ -62,7 +66,7 @@ const App = () => {
       <NavBar
         numberOfProducts={numberOfProducts()}
         totalPrice={totalPrice()}
-        products={cart.products}
+        cart={cart}
         incrementProduct={incrementProduct}
         decrementProduct={decrementProduct}
       />{" "}
@@ -70,7 +74,12 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route
           path="/shopPage"
-          element={<ShopPage addProductToCart={addProductToCart} />}
+          element={
+            <ShopPage
+              productsArray={productsArray}
+              addProductToCart={addProductToCart}
+            />
+          }
         />
         <Route path="/contactPage" element={<ContactPage />} />
         <Route path="*" element={<p>There's nothing here!</p>} />

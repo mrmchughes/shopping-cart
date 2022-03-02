@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const {
-    products,
-    numberOfProducts,
-    totalPrice,
+    cart,
+    cartLength,
+    priceSummary,
     incrementProduct,
     decrementProduct,
   } = props;
@@ -20,14 +20,14 @@ const NavBar = (props) => {
 
         <div className="navBarRight">
           <Link to="/">Home</Link> |{" "}
-          <Link to="/shopPage">Shop Page ({numberOfProducts})</Link> |{" "}
+          <Link to="/shopPage">Shop Page ({cartLength})</Link> |{" "}
           <Link to="/contactPage">Contact</Link>
         </div>
       </nav>
 
       <div className="cartContainer">
-        {products.map((product) => {
-          return (
+        <div>
+          {cart.map((product) => {
             <div key={product.id} className="cartItem">
               <p>
                 {product.name} ({product.quantity})
@@ -45,10 +45,10 @@ const NavBar = (props) => {
               >
                 -
               </button>
-            </div>
-          );
-        })}
-        <p>Your total is: {totalPrice}gp</p>
+            </div>;
+          })}
+        </div>
+        <p>Your total is: {priceSummary}gp</p>
       </div>
     </div>
   );

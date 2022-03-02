@@ -1,7 +1,15 @@
 import React from "react";
 
 const ProductCardMaker = (props) => {
-  const { image, alt, name, price, addProductToCart } = props;
+  const {
+    image,
+    alt,
+    name,
+    price,
+    incrementProduct,
+    decrementProduct,
+    quantity,
+  } = props;
 
   return (
     <div className="card">
@@ -10,8 +18,11 @@ const ProductCardMaker = (props) => {
       <p>{name}</p>
       <p>{price}gp</p>
 
-      <button type="button" onClick={addProductToCart}>
-        Add to Cart
+      <button type="button" onClick={incrementProduct}>
+        +
+      </button>
+      <button type="button" onClick={decrementProduct}>
+        -
       </button>
     </div>
   );
