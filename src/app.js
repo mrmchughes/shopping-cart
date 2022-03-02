@@ -9,36 +9,26 @@ import ShopPage from "./components/ShopPage";
 import ContactPage from "./components/ContactPage";
 
 import productsArray from "./components/productsArray";
-import ProductCardMaker from "./components/ProductCardMaker";
+//import ProductCardMaker from "./components/ProductCardMaker";
 
 const App = () => {
   const [cart, setCart] = useState([]);
 
   const incrementProduct = (product) => {
-    console.log(typeof cart);
-    setCart({ ...product, quantity: +1 });
+    console.log(
+      "incrementProduct " + typeof cart + " cart is equal to " + cart
+    );
+    console.log(typeof product + " product is = " + product.name);
+    //setCart({ ...cart[product], quantity: +1 });
   };
 
   const decrementProduct = (product) => {
-    setCart({ ...product, quantity: -1 });
+    console.log(
+      "decrementProduct " + typeof cart + " cart is equal to " + cart
+    );
+    console.log(typeof product + " product is = " + product.name);
+    //setCart({ ...product, quantity: -1 });
   };
-
-  //const cartProducts = cart.map((product) => {
-  //  return (
-  //    <div key={product.id} className="cartItem">
-  //      <p>
-  //        {product.name} ({product.quantity})
-  //      </p>{" "}
-  //      <p>{product.price}gp</p>
-  //      <button type="button" onClick={incrementProduct.bind(this, product)}>
-  //        +
-  //      </button>
-  //      <button type="button" onClick={decrementProduct.bind(this, product)}>
-  //        -
-  //      </button>
-  //    </div>
-  //  );
-  //});
 
   const numberOfProducts = () => {
     //cart.reduce((sum, product) => sum + product.quantity, 0);
@@ -53,9 +43,17 @@ const App = () => {
 
   const addProductToCart = (product) => {
     const isItemInCart = cart.map((product) => product.id).includes(product.id);
+    console.log(
+      "addProductToCart " +
+        "cart type is " +
+        typeof cart +
+        " cart is equal to " +
+        cart
+    );
+    console.log(typeof product + " product is = " + product.name);
 
     if (isItemInCart) {
-      incrementProduct();
+      incrementProduct(product);
     } else {
       setCart([...cart, product]);
     }
