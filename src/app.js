@@ -15,42 +15,62 @@ const App = () => {
   const [cart, setCart] = useState([]);
 
   const incrementProduct = (product) => {
-    console.log(
-      "incrementProduct " + typeof cart + " cart is equal to " + cart
+    console.log(product.name + " quantity = " + product.quantity);
+
+    setCart(
+      cart.map((x) =>
+        x.id === product.id
+          ? {
+              ...x,
+              quantity: x.quantity + 1,
+            }
+          : x
+      )
     );
-    console.log(typeof product + " product is = " + product.name);
-    //setCart({ ...cart[product], quantity: +1 });
   };
 
   const decrementProduct = (product) => {
-    console.log(
-      "decrementProduct " + typeof cart + " cart is equal to " + cart
+    console.log(product.name + " quantity = " + product.quantity);
+
+    setCart(
+      cart.map((x) =>
+        x.id === product.id
+          ? {
+              ...x,
+              quantity: x.quantity - 1,
+            }
+          : x
+      )
     );
-    console.log(typeof product + " product is = " + product.name);
-    //setCart({ ...product, quantity: -1 });
   };
 
-  const numberOfProducts = () => {
-    //cart.reduce((sum, product) => sum + product.quantity, 0);
-  };
+  //const cartLength = () => {
+  // cart.reduce((sum, product) => (sum = sum + product.quantity), 0);
+  //};
 
-  const totalPrice = () => {
-    //cart.reduce(
-    //  (total, product) => total + product.quantity * product.price,
-    //  0
-    //);
-  };
+  const cartLength = cart.reduce(
+    (total, product) => (total = total + product.quantity),
+    0
+  );
+
+  const totalPrice = cart.reduce(
+    (total, product) => total + product.quantity * product.price,
+    0
+  );
+
+  //const totalPrice = () => {
+  //  cart.reduce(
+  //    (total, product) => total + product.quantity * product.price,
+  //    0
+  //  );
+  //};
 
   const addProductToCart = (product) => {
     const isItemInCart = cart.map((product) => product.id).includes(product.id);
+
     console.log(
-      "addProductToCart " +
-        "cart type is " +
-        typeof cart +
-        " cart is equal to " +
-        cart
+      "addProductToCart " + product.name + " quantity = " + product.quantity
     );
-    console.log(typeof product + " product is = " + product.name);
 
     if (isItemInCart) {
       incrementProduct(product);
@@ -62,8 +82,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <NavBar
-        numberOfProducts={numberOfProducts()}
-        totalPrice={totalPrice()}
+        cartLength={cartLength}
+        totalPrice={totalPrice}
         cart={cart}
         incrementProduct={incrementProduct}
         decrementProduct={decrementProduct}

@@ -6,7 +6,7 @@ const NavBar = (props) => {
   const {
     cart,
     cartLength,
-    priceSummary,
+    totalPrice,
     incrementProduct,
     decrementProduct,
   } = props;
@@ -50,7 +50,7 @@ const NavBar = (props) => {
             );
           })}
         </div>
-        <p>Your total is: {priceSummary}gp</p>
+        <p>Your total is: {totalPrice}gp</p>
       </div>
     </div>
   );
