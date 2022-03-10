@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
@@ -25,8 +27,8 @@ a {
 }
 
 .cartContainer {
-  float: right;
   border: 1px solid red;
+  position: absolute;
 }
 
 .homePageContainer {
@@ -54,21 +56,24 @@ a {
 
 .shopPageContainer {
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-  gap: 20px;
-  width: 50%;
+  max-width: 798px;
+  gap: 16px;
+
+  grid-template-columns: repeat(auto-fill, 250px);
+
   margin: 0 auto;
 }
 
 .card {
+  width: 250px;
+  height: 250px;
+  background-color: grey;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  text-align: center;
 
-  width: 250px;
-  height: 250px;
+  text-align: center;
 
   font-size: 0.85rem;
 
@@ -76,8 +81,6 @@ a {
   transition: 0.3;
   border-radius: 5px;
   border: 1px solid #247ba0;
-
-  background-color: grey;
 }
 
 .card:hover {

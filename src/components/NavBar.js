@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import uniqid from "uniqid";
 
 const NavBar = (props) => {
   const {
@@ -9,11 +8,15 @@ const NavBar = (props) => {
     totalPrice,
     incrementProduct,
     decrementProduct,
+    checkout,
+    toggleCart,
+    navBarCart,
+    //handleProductQuantityChange,
   } = props;
 
   return (
     <div className="navBar">
-      <nav>
+      <header>
         <div className="logoLink">
           <Link to="/">The Invulnerable Vagrant</Link>
         </div>
@@ -21,39 +24,57 @@ const NavBar = (props) => {
         <div className="navBarRight">
           <Link to="/">Home</Link> |{" "}
           <Link to="/shopPage">Shop Page ({cartLength})</Link> |{" "}
-          <Link to="/contactPage">Contact</Link>
+          <button type="button" onClick={toggleCart}>
+            Cart
+          </button>
+          <div
+            id="cartContainer"
+            className="cartContainer"
+            style={{ display: navBarCart.isHidden ? "none" : "block" }}
+          >
+            <div>
+              {cart.map((product) => {
+                return (
+                  <div key={product.id} className="cartItem">
+                    <p>
+                      {product.name} ({product.quantity})
+                    </p>{" "}
+                    <p>{product.price}gp</p>
+                    <button
+                      type="button"
+                      value="decrementProduct"
+                      onClick={decrementProduct.bind(this, product)}
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      value="incrementProduct"
+                      onClick={incrementProduct.bind(this, product)}
+                    >
+                      +
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+            <p>Your total is: {totalPrice}gp</p>
+            <button type="button" onClick={checkout}>
+              Checkout
+            </button>
+          </div>
         </div>
-      </nav>
-
-      <div className="cartContainer">
-        <div>
-          {cart.map((product) => {
-            return (
-              <div key={product.id} className="cartItem">
-                <p>
-                  {product.name} ({product.quantity})
-                </p>{" "}
-                <p>{product.price}gp</p>
-                <button
-                  type="button"
-                  onClick={incrementProduct.bind(this, product)}
-                >
-                  +
-                </button>
-                <button
-                  type="button"
-                  onClick={decrementProduct.bind(this, product)}
-                >
-                  -
-                </button>
-              </div>
-            );
-          })}
-        </div>
-        <p>Your total is: {totalPrice}gp</p>
-      </div>
+      </header>
     </div>
   );
 };
 
 export default NavBar;
+
+//<input
+//type="number"
+//name="{product.name}"
+//step="1"
+//value={product.quantity}
+//onChange={handleProductQuantityChange}
+// />

@@ -17,7 +17,7 @@ const productsArray = [
     alt: "Handy Haversack",
     name: "Handy Haversack",
     price: 1350,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -25,7 +25,7 @@ const productsArray = [
     alt: "Periapt of Wound Closure",
     name: "Periapt of Wound Closure",
     price: 150,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -33,7 +33,7 @@ const productsArray = [
     alt: "Cloak of Protection",
     name: "Cloak of Protection",
     price: 800,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -41,7 +41,7 @@ const productsArray = [
     alt: "Pearl of Power",
     name: "Pearl of Power",
     price: 350,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -49,7 +49,7 @@ const productsArray = [
     alt: "Plus One Shield",
     name: "+1 Shield",
     price: 550,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -57,7 +57,7 @@ const productsArray = [
     alt: "Bracers of Defense",
     name: "Bracers of Defense",
     price: 1200,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -65,7 +65,7 @@ const productsArray = [
     alt: "Hilt of a broken Longsword",
     name: "Hilt of a broken Longsword",
     price: 300,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -73,7 +73,7 @@ const productsArray = [
     alt: "Cloak of Elvenkind",
     name: "Cloak of Elvenkind",
     price: 450,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
   {
@@ -81,7 +81,7 @@ const productsArray = [
     alt: "Ioun Stone of Fortitude",
     name: "Ioun Stone of Fortitude",
     price: 5500,
-    quantity: 0,
+    quantity: 1,
     id: uniqid(),
   },
 ];

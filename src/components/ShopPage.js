@@ -1,5 +1,4 @@
 import React from "react";
-import ProductCardMaker from "./ProductCardMaker";
 
 const ShopPage = (props) => {
   const { productsArray, addProductToCart } = props;

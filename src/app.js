@@ -13,6 +13,7 @@ import productsArray from "./components/productsArray";
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [navBarCart, setNavBarCart] = useState({ isHidden: true });
 
   const incrementProduct = (product) => {
     console.log(product.name + " quantity = " + product.quantity);
@@ -32,20 +33,29 @@ const App = () => {
   const decrementProduct = (product) => {
     console.log(product.name + " quantity = " + product.quantity);
 
-    setCart(
-      cart.map((x) =>
-        x.id === product.id
-          ? {
-              ...x,
-              quantity: x.quantity - 1,
-            }
-          : x
-      )
-    );
+    if (product.quantity === 1) {
+      setCart(cart.filter((x) => x !== product));
+    } else {
+      setCart(
+        cart.map((x) =>
+          x.id === product.id
+            ? {
+                ...x,
+                quantity: x.quantity - 1,
+              }
+            : x
+        )
+      );
+    }
   };
 
-  //const cartLength = () => {
-  // cart.reduce((sum, product) => (sum = sum + product.quantity), 0);
+  // switch Case?
+  // const handleProductQuantityChange = (e) => {
+  //  const { product, quantity } = e.target;
+  //  setCart((prevCart) => ({
+  //    ...prevCart,
+  //    [product]: quantity,
+  //  }));
   //};
 
   const cartLength = cart.reduce(
@@ -57,13 +67,6 @@ const App = () => {
     (total, product) => total + product.quantity * product.price,
     0
   );
-
-  //const totalPrice = () => {
-  //  cart.reduce(
-  //    (total, product) => total + product.quantity * product.price,
-  //    0
-  //  );
-  //};
 
   const addProductToCart = (product) => {
     const isItemInCart = cart.map((product) => product.id).includes(product.id);
@@ -79,6 +82,14 @@ const App = () => {
     }
   };
 
+  const checkout = () => {
+    alert("Checkout confirmed!");
+  };
+
+  const toggleCart = () => {
+    setNavBarCart({ isHidden: !navBarCart.isHidden });
+  };
+
   return (
     <BrowserRouter>
       <NavBar
@@ -87,6 +98,10 @@ const App = () => {
         cart={cart}
         incrementProduct={incrementProduct}
         decrementProduct={decrementProduct}
+        checkout={checkout}
+        toggleCart={toggleCart}
+        navBarCart={navBarCart}
+        //handleProductQuantityChange={handleProductQuantityChange}
       />{" "}
       <Routes>
         <Route path="/" element={<HomePage />} />
