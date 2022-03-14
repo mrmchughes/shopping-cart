@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Icon from "@mdi/react";
+import { mdiCartArrowRight } from "@mdi/js";
 
 const NavBar = (props) => {
   const {
@@ -11,22 +13,24 @@ const NavBar = (props) => {
     checkout,
     toggleCart,
     navBarCart,
-    //handleProductQuantityChange,
   } = props;
 
   return (
     <div className="navBar">
       <header>
         <div className="logoLink">
-          <Link to="/">The Invulnerable Vagrant</Link>
+          <Link to="/">Friendly Local Game Store</Link>
         </div>
 
         <div className="navBarRight">
           <Link to="/">Home</Link> |{" "}
           <Link to="/shopPage">Shop Page ({cartLength})</Link> |{" "}
-          <button type="button" onClick={toggleCart}>
-            Cart
-          </button>
+          <Icon
+            path={mdiCartArrowRight}
+            size={0.7}
+            onClick={toggleCart}
+            className="cartIcon"
+          />
           <div
             id="cartContainer"
             className="cartContainer"
@@ -39,7 +43,7 @@ const NavBar = (props) => {
                     <p>
                       {product.name} ({product.quantity})
                     </p>{" "}
-                    <p>{product.price}gp</p>
+                    <p>$ {product.price}</p>
                     <button
                       type="button"
                       value="decrementProduct"
@@ -58,7 +62,7 @@ const NavBar = (props) => {
                 );
               })}
             </div>
-            <p>Your total is: {totalPrice}gp</p>
+            <p>Your total is: $ {totalPrice}</p>
             <button type="button" onClick={checkout}>
               Checkout
             </button>
@@ -70,11 +74,3 @@ const NavBar = (props) => {
 };
 
 export default NavBar;
-
-//<input
-//type="number"
-//name="{product.name}"
-//step="1"
-//value={product.quantity}
-//onChange={handleProductQuantityChange}
-// />
