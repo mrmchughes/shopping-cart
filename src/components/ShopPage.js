@@ -1,4 +1,5 @@
 import React from "react";
+import { BsCartPlus } from "react-icons/bs";
 
 const ShopPage = (props) => {
   const { productsArray, addProductToCart } = props;
@@ -10,14 +11,16 @@ const ShopPage = (props) => {
           <div className="card" key={product.id}>
             <img src={product.image} alt={product.alt}></img>
 
-            <p>{product.name}</p>
-            <p>$ {product.price}</p>
+            <p className="productText">{product.name}</p>
+            <p className="productText">$ {product.price}</p>
 
             <button
               type="button"
+              className="addProductButton"
               onClick={addProductToCart.bind(this, product)}
             >
-              Add to Cart
+              <BsCartPlus />
+              <span className="iconText">Add to Cart</span>
             </button>
           </div>
         );

@@ -1,32 +1,46 @@
 * {
   box-sizing: border-box;
-  padding: 0px;
   margin: 0px;
 }
 
 body {
   font-family: "Helvetica Neue", sans-serif;
-  background-color: #fffcff;
+  background-color: #f8f9fa;
 }
 
-a {
+.productText {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+button {
+  margin-top: 10px;
+  color: #212529;
+  background-color: #e9ecef;
+  border: 1px solid black;
+  border-radius: 8px;
   text-align: center;
-  color: #0f172a;
-  background-color: #f8fafc;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+button:hover {
+  box-shadow: 8px 10px 10px 1px #adb5bd;
+  font-size: 1.05rem;
+}
+
+.navBar a {
+  text-align: center;
+  color: #495057;
   text-decoration: none;
-  font-size: 1.05rem;
-}
-
-a:hover {
   font-size: 1.1rem;
 }
 
-.cartIcon {
-  font-size: 1.05rem;
-}
-
-.cartIcon:hover {
-  font-size: 1.1rem;
+.navBar a:hover {
+  font-size: 1.15rem;
+  color: #212529;
+  text-shadow: 2px 2px 5px #212529;
 }
 
 .navBar {
@@ -47,8 +61,14 @@ a:hover {
   margin-bottom: 20px;
 }
 
+.navBarRight a {
+  margin-right: 25px;
+}
+
 .cartContainer {
-  border: 1px solid red;
+  border: 1px solid #212529;
+  padding: 10px;
+  margin: 15px;
   position: absolute;
 }
 
@@ -58,13 +78,15 @@ a:hover {
 
   grid-template-areas:
     ". . . . ."
-    ". . . . ."
     ". homePageHeader homePageHeader homePageHeader ."
-    ". homePageBrowse homePageBrowse homePageBrowse ."
-    ". . . . .";
+    ". . . . ."
+    ". . . . ."
+    ". homePageBrowse homePageBrowse homePageBrowse .";
 
   text-align: center;
-  color: black;
+  color: #212529;
+  font-size: 2rem;
+  background-image: url("");
 }
 
 .homePageHeader {
@@ -75,20 +97,33 @@ a:hover {
   grid-area: homePageBrowse;
 }
 
+.homePageBrowse a {
+  text-align: center;
+  font-size: 1.85rem;
+  color: #495057;
+  text-decoration: none;
+}
+
+.homePageBrowse a:hover {
+  font-size: 1.95rem;
+  color: #212529;
+  text-shadow: 2px 2px 5px #212529;
+}
+
 .shopPageContainer {
   display: grid;
-  max-width: 1064px;
+  max-width: 1244px;
   gap: 16px;
 
-  grid-template-columns: repeat(auto-fill, 250px);
+  grid-template-columns: repeat(auto-fill, 295px);
 
   margin: 0 auto;
 }
 
 .card {
-  width: 240px;
-  height: 400px;
-  background-color: grey;
+  width: 295px;
+  height: 380px;
+  background-color: #ced4da;
 
   display: flex;
   flex-direction: column;
@@ -96,30 +131,24 @@ a:hover {
 
   text-align: center;
 
-  font-size: 0.85rem;
-
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3;
   border-radius: 5px;
-  border: 1px solid #247ba0;
+  border: 1px solid #343a40;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 #424242;
 }
 
 .card img {
+  margin-top: 5px;
   width: 200px;
   height: 260px;
   object-fit: cover;
 }
 
-.cartPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.iconText {
+  margin-left: 5px;
 }
 
 .errorPage {

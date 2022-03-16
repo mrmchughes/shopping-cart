@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Icon from "@mdi/react";
-import { mdiCartArrowRight } from "@mdi/js";
+import { BsCart3 } from "react-icons/bs";
 
 const NavBar = (props) => {
   const {
@@ -23,14 +22,12 @@ const NavBar = (props) => {
         </div>
 
         <div className="navBarRight">
-          <Link to="/">Home</Link> |{" "}
-          <Link to="/shopPage">Shop Page ({cartLength})</Link> |{" "}
-          <Icon
-            path={mdiCartArrowRight}
-            size={0.7}
-            onClick={toggleCart}
-            className="cartIcon"
-          />
+          <Link to="/">Home</Link>{" "}
+          <Link to="/shopPage">Shop Page ({cartLength})</Link>{" "}
+          <button type="button" className="classIcon" onClick={toggleCart}>
+            <BsCart3 />
+            <span className="iconText">View Cart</span>
+          </button>
           <div
             id="cartContainer"
             className="cartContainer"
