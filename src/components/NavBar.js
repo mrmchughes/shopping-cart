@@ -22,9 +22,13 @@ const NavBar = (props) => {
         </div>
 
         <div className="navBarRight">
-          <Link to="/">Home</Link>{" "}
-          <Link to="/shopPage">Shop Page ({cartLength})</Link>{" "}
-          <button type="button" className="classIcon" onClick={toggleCart}>
+          <Link to="/">Home</Link>
+          <Link to="/shopPage">Shop Page ({cartLength})</Link>
+          <button
+            type="button"
+            className="cartToggleButton"
+            onClick={toggleCart}
+          >
             <BsCart3 />
             <span className="iconText">View Cart</span>
           </button>
@@ -37,9 +41,9 @@ const NavBar = (props) => {
               {cart.map((product) => {
                 return (
                   <div key={product.id} className="cartItem">
-                    <p>
+                    <p className="productNameAndQuantity">
                       {product.name} ({product.quantity})
-                    </p>{" "}
+                    </p>
                     <p>$ {product.price}</p>
                     <button
                       type="button"
@@ -59,8 +63,8 @@ const NavBar = (props) => {
                 );
               })}
             </div>
-            <p>Your total is: $ {totalPrice}</p>
-            <button type="button" onClick={checkout}>
+            <p className="totalPriceP">Your total is: $ {totalPrice}</p>
+            <button type="button" onClick={checkout} className="checkoutButton">
               Checkout
             </button>
           </div>

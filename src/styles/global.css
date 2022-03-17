@@ -6,6 +6,8 @@
 body {
   font-family: "Helvetica Neue", sans-serif;
   background-color: #f8f9fa;
+  background-image: url("https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
 }
 
 .productText {
@@ -15,36 +17,67 @@ body {
 }
 
 button {
-  margin-top: 10px;
   color: #212529;
-  background-color: #e9ecef;
+  background-color: #dee2e6;
   border: 1px solid black;
-  border-radius: 8px;
   text-align: center;
+}
+
+.shopPageContainer button {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.shopPageContainer button:hover {
+  box-shadow: 0px 5px 15px #adb5bd;
+  font-size: 1.05rem;
+}
+
+.cartToggleButton {
   font-size: 1rem;
+  border-radius: 8px;
+}
+
+.cartToggleButton:hover {
+  box-shadow: 0px 5px 15px #f8f9fa;
+}
+
+.cartContainer button {
+  border-radius: 8px;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cartContainer button:hover {
+  box-shadow: 0px 5px 15px #adb5bd;
+}
+
+.checkoutButton {
   padding: 5px;
 }
 
-button:hover {
-  box-shadow: 8px 10px 10px 1px #adb5bd;
-  font-size: 1.05rem;
+.iconText {
+  margin-left: 5px;
 }
 
 .navBar a {
   text-align: center;
-  color: #495057;
+  color: #f8f9fa;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .navBar a:hover {
-  font-size: 1.15rem;
-  color: #212529;
-  text-shadow: 2px 2px 5px #212529;
+  text-shadow: 2px 2px 5px #f8f9fa;
 }
 
 .navBar {
   overflow: hidden;
+  background-color: #343a40;
+  padding: 25px;
+  margin-bottom: 25px;
 }
 
 .navBar .logoLink {
@@ -52,6 +85,7 @@ button:hover {
   margin-left: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
+  grid-area: logoLink;
 }
 
 .navBar .navBarRight {
@@ -59,6 +93,7 @@ button:hover {
   margin-right: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
+  grid-area: navBarRight;
 }
 
 .navBarRight a {
@@ -68,8 +103,24 @@ button:hover {
 .cartContainer {
   border: 1px solid #212529;
   padding: 10px;
-  margin: 15px;
+  background-color: #f8f9fa;
   position: absolute;
+  margin-top: 5px;
+}
+
+.cartItem {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #212529;
+}
+
+.totalPriceP {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.productNameAndQuantity {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .homePageContainer {
@@ -80,13 +131,17 @@ button:hover {
     ". . . . ."
     ". homePageHeader homePageHeader homePageHeader ."
     ". . . . ."
-    ". . . . ."
-    ". homePageBrowse homePageBrowse homePageBrowse .";
+    ". homePageBrowse homePageBrowse homePageBrowse ."
+    ". . . . .";
 
   text-align: center;
-  color: #212529;
+  color: #f8f9fa;
   font-size: 2rem;
-  background-image: url("");
+  height: 750px;
+}
+
+.homePageContainer img {
+  object-fit: cover;
 }
 
 .homePageHeader {
@@ -100,7 +155,7 @@ button:hover {
 .homePageBrowse a {
   text-align: center;
   font-size: 1.85rem;
-  color: #495057;
+  color: #f8f9fa;
   text-decoration: none;
 }
 
@@ -114,16 +169,14 @@ button:hover {
   display: grid;
   max-width: 1244px;
   gap: 16px;
-
   grid-template-columns: repeat(auto-fill, 295px);
-
   margin: 0 auto;
 }
 
 .card {
   width: 295px;
   height: 380px;
-  background-color: #ced4da;
+  background-color: #f8f9fa;
 
   display: flex;
   flex-direction: column;
@@ -137,18 +190,11 @@ button:hover {
   border: 1px solid #343a40;
 }
 
-.card:hover {
-}
-
 .card img {
   margin-top: 5px;
   width: 200px;
   height: 260px;
   object-fit: cover;
-}
-
-.iconText {
-  margin-left: 5px;
 }
 
 .errorPage {
