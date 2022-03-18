@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div className="homePageContainer">
       <div className="homePageHeader">
-        <h2>Friendly Local Game Store</h2>
+        <p>Friendly Local Game Store</p>
       </div>
       <div className="homePageBrowse">
         <Link to="/shopPage">Browse Our Products </Link>

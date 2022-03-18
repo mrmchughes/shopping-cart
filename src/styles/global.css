@@ -43,19 +43,36 @@ button {
   box-shadow: 0px 5px 15px #f8f9fa;
 }
 
-.cartContainer button {
-  border-radius: 8px;
-  margin-right: 5px;
-  margin-top: 10px;
+.quantityButtonDiv {
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.cartContainer button:hover {
+.cartGrid button {
+  margin-left: 5px;
+  margin-right: 5px;
+
+  padding: 5px;
+}
+
+.cartGrid button:hover {
   box-shadow: 0px 5px 15px #adb5bd;
 }
 
 .checkoutButton {
   padding: 5px;
+  margin-top: 10px;
+}
+
+.checkoutButton:hover {
+  box-shadow: 0px 5px 15px #adb5bd;
+  font-size: 1.05rem;
+}
+
+.cartText {
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #212529;
 }
 
 .iconText {
@@ -104,39 +121,64 @@ button {
   border: 1px solid #212529;
   padding: 10px;
   background-color: #f8f9fa;
-  position: absolute;
-  margin-top: 5px;
+  margin: 0 auto;
+}
+
+.cartGrid {
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, 350px);
+
+  overflow: auto;
+
+  text-align: center;
 }
 
 .cartItem {
-  margin-bottom: 10px;
-  border-bottom: 1px solid #212529;
+  width: 350px;
+  height: 125px;
+  background-color: #f8f9fa;
+  font-size: 0.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  border-radius: 5px;
+  border: 1px solid #343a40;
 }
 
-.totalPriceP {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.checkoutContainer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .productNameAndQuantity {
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-bottom: 1px solid #212529;
 }
 
 .homePageContainer {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 1fr 2fr 1fr 1fr / 1fr 1fr 2fr 1fr 1fr;
 
   grid-template-areas:
     ". . . . ."
-    ". homePageHeader homePageHeader homePageHeader ."
+    ". . homePageHeader . ."
     ". . . . ."
-    ". homePageBrowse homePageBrowse homePageBrowse ."
+    ". . homePageBrowse . ."
     ". . . . .";
 
   text-align: center;
   color: #f8f9fa;
-  font-size: 2rem;
   height: 750px;
 }
 
@@ -146,23 +188,33 @@ button {
 
 .homePageHeader {
   grid-area: homePageHeader;
+  font-size: 2.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212529;
 }
 
 .homePageBrowse {
   grid-area: homePageBrowse;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212529;
 }
 
 .homePageBrowse a {
   text-align: center;
-  font-size: 1.85rem;
+  font-size: 2.75rem;
   color: #f8f9fa;
   text-decoration: none;
 }
 
 .homePageBrowse a:hover {
-  font-size: 1.95rem;
-  color: #212529;
-  text-shadow: 2px 2px 5px #212529;
+  font-size: 2.85rem;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 5px #f8f9fa;
 }
 
 .shopPageContainer {

@@ -1,18 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsCart3 } from "react-icons/bs";
 
 const NavBar = (props) => {
-  const {
-    cart,
-    cartLength,
-    totalPrice,
-    incrementProduct,
-    decrementProduct,
-    checkout,
-    toggleCart,
-    navBarCart,
-  } = props;
+  const { cartLength } = props;
 
   return (
     <div className="navBar">
@@ -23,51 +13,8 @@ const NavBar = (props) => {
 
         <div className="navBarRight">
           <Link to="/">Home</Link>
-          <Link to="/shopPage">Shop Page ({cartLength})</Link>
-          <button
-            type="button"
-            className="cartToggleButton"
-            onClick={toggleCart}
-          >
-            <BsCart3 />
-            <span className="iconText">View Cart</span>
-          </button>
-          <div
-            id="cartContainer"
-            className="cartContainer"
-            style={{ display: navBarCart.isHidden ? "none" : "block" }}
-          >
-            <div>
-              {cart.map((product) => {
-                return (
-                  <div key={product.id} className="cartItem">
-                    <p className="productNameAndQuantity">
-                      {product.name} ({product.quantity})
-                    </p>
-                    <p>$ {product.price}</p>
-                    <button
-                      type="button"
-                      value="decrementProduct"
-                      onClick={decrementProduct.bind(this, product)}
-                    >
-                      -
-                    </button>
-                    <button
-                      type="button"
-                      value="incrementProduct"
-                      onClick={incrementProduct.bind(this, product)}
-                    >
-                      +
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-            <p className="totalPriceP">Your total is: $ {totalPrice}</p>
-            <button type="button" onClick={checkout} className="checkoutButton">
-              Checkout
-            </button>
-          </div>
+          <Link to="/shopPage">Shop Page</Link>
+          <Link to="/cartPage">Cart ({cartLength})</Link>
         </div>
       </header>
     </div>

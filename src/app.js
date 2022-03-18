@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
 import ShopPage from "./components/ShopPage";
+import CartPage from "./components/CartPage";
 import productsArray from "./components/productsArray";
 import "./styles/global.css";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const [navBarCart, setNavBarCart] = useState({ isHidden: true });
 
   const incrementProduct = (product) => {
     setCart(
@@ -64,22 +64,9 @@ const App = () => {
     alert("Thank you for checking out my Shopping Cart project!");
   };
 
-  const toggleCart = () => {
-    setNavBarCart({ isHidden: !navBarCart.isHidden });
-  };
-
   return (
     <BrowserRouter>
-      <NavBar
-        cartLength={cartLength}
-        totalPrice={totalPrice}
-        cart={cart}
-        incrementProduct={incrementProduct}
-        decrementProduct={decrementProduct}
-        checkout={checkout}
-        toggleCart={toggleCart}
-        navBarCart={navBarCart}
-      />{" "}
+      <NavBar cartLength={cartLength} />{" "}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
@@ -88,6 +75,18 @@ const App = () => {
             <ShopPage
               productsArray={productsArray}
               addProductToCart={addProductToCart}
+            />
+          }
+        />
+        <Route
+          path="/cartPage"
+          element={
+            <CartPage
+              cart={cart}
+              totalPrice={totalPrice}
+              incrementProduct={incrementProduct}
+              decrementProduct={decrementProduct}
+              checkout={checkout}
             />
           }
         />

@@ -12,7 +12,7 @@ const ShopPage = (props) => {
             <img src={product.image} alt={product.alt}></img>
 
             <p className="productText">{product.name}</p>
-            <p className="productText">$ {product.price}</p>
+            <p className="productText">${product.price}</p>
 
             <button
               type="button"
