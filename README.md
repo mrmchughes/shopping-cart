@@ -7,13 +7,15 @@
 
 ## Links
 
-- [Repo] https://github.com/mrmchughes/Memory-Card
+- [Repo] https://github.com/mrmchughes/shopping-cart
 
-- [Live] https://mrmchughes.github.io/Memory-Card/
+- [Live] https://mrmchughes.github.io/shopping-cart
 
 ## Screenshots
 
-[Main Page] ![image](https://user-images.githubusercontent.com/10659805/153058789-c29aa45f-28d7-4bbc-8905-9ebbfa880e4d.png)
+[Home Page] ![image](https://user-images.githubusercontent.com/10659805/159097693-6e252419-7476-4753-ac7d-f51518280d90.png)
+[Shop Page] ![image](https://user-images.githubusercontent.com/10659805/159097709-54bf2d1b-01e1-44ee-80e5-1947638fea64.png)
+[Cart Page] ![image](https://user-images.githubusercontent.com/10659805/159097750-688f50f5-4d92-4876-8a40-6810758fed87.png)
 
 ## Built With
 
@@ -40,6 +42,4 @@ Give a ⭐️ if you like this project!
 
 # Credit
 
-The code for const shuffle was originally written by user ikmo at https://stackoverflow.com/questions/63540873/react-hooks-shuffle-array-immediately-on-load-and-onclick.
-
-The art for the cards is taken from https://criticalrole.fandom.com/wiki/Critical_Role_Wiki.
+The art for the products is taken from https://www.dndbeyond.com/.
