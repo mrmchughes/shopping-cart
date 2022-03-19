@@ -1,6 +1,6 @@
 <h1>Shopping Cart</h1>
 
-<p>I developed this React Shopping Cart app as part of The Odin Project's Fullstack [curriculum] (https://www.theodinproject.com/courses/javascript/lessons/shopping-chart).
+<p>I developed this React Shopping Cart app as part of The Odin Project's Fullstack [curriculum] (https://www.theodinproject.com/courses/javascript/lessons/shopping-chart)
   This project was another milestone for me, as it utilized react-router-dom, letting me build a website with multiple pages.</p>
 
 <p>On the top of the site is a persistent Navbar, which links to the pages of the website.</p>  
