@@ -48,4 +48,5 @@ The art for the products is taken from https://www.dndbeyond.com/.
 # License
 
 Copyright © 2022 [Michael Hughes](https://github.com/mrmchughes).
+
 This project is MIT licensed.
