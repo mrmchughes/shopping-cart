@@ -5,9 +5,9 @@ I developed this React Shopping Cart app as part of The Odin Project's Fullstack
 
 On the top of the site is a persistent Navbar, which links to the pages of the website.
 
-On the Shop page, when a user clicks on a product, it is added to the cart. The total number of products in the Cart is displayed next to the link to the cart page in the Navbar.
+On the Shop page, a user can add products to the cart. The total number of products in the Cart is displayed next to the link to the cart page in the Navbar.
 
-On the cart page, the products are displayed in a grid that adjusts dynamically as products are either added or removed from the cart. Each product has it's quantity displayed next to the name, with two buttons to adjust the quantity as needed. If the quantity of a product is adjusted to 0, it is removed from the cart. At the bottom of the cart page is a div containing the total price of the products in the cart, and a fake checkout button, which displays an alerts thanking the user for looking at the site.
+On the cart page, the products are displayed in a grid that adjusts dynamically as products are either added or removed from the cart. The quantity of each product is displayed next to the name, with two buttons to adjust the quantity as needed. If the quantity of a product is adjusted to 0, it is removed from the cart. At the bottom of the cart page is a div containing the total price of the products in the cart, and a fake checkout button, which displays an alerts thanking the user for looking at the site.
 
 ## Links
 
@@ -44,3 +44,8 @@ Give a ⭐️ if you like this project!
 # Credit
 
 The art for the products is taken from https://www.dndbeyond.com/.
+
+# License
+
+Copyright © 2022 [Michael Hughes](https://github.com/mrmchughes).
+This project is MIT licensed.
