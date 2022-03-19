@@ -1,13 +1,13 @@
 <h1>Shopping Cart</h1>
 
-<I developed this React Shopping Cart app as part of The Odin Project's Fullstack [curriculum](https://www.theodinproject.com/courses/javascript/lessons/shopping-chart).
+I developed this React Shopping Cart app as part of The Odin Project's Fullstack [curriculum](https://www.theodinproject.com/courses/javascript/lessons/shopping-chart).
   This project was another milestone for me, as it utilized react-router-dom, letting me build a website with multiple pages.
 
-<p>On the top of the site is a persistent Navbar, which links to the pages of the website.</p>  
+On the top of the site is a persistent Navbar, which links to the pages of the website.
 
-<p>On the Shop page, when a user clicks on a product, it is added to the cart. The total number of products in the Cart is displayed next to the link to the cart page in the Navbar.</p>
+On the Shop page, when a user clicks on a product, it is added to the cart. The total number of products in the Cart is displayed next to the link to the cart page in the Navbar.
 
-<p>On the cart page, the products are displayed in a grid that adjusts dynamically as products are either added or removed from the cart. Each product has it's quantity displayed next to the name, with two buttons to adjust the quantity as needed. If the quantity of a product is adjusted to 0, it is removed from the cart. At the bottom of the cart page is a div containing the total price of the products in the cart, and a fake checkout button, which displays an alerts thanking the user for looking at the site.</p>
+On the cart page, the products are displayed in a grid that adjusts dynamically as products are either added or removed from the cart. Each product has it's quantity displayed next to the name, with two buttons to adjust the quantity as needed. If the quantity of a product is adjusted to 0, it is removed from the cart. At the bottom of the cart page is a div containing the total price of the products in the cart, and a fake checkout button, which displays an alerts thanking the user for looking at the site.
 
 ## Links
 
