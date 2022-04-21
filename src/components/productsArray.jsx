@@ -1,9 +1,4 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const uniqid_1 = __importDefault(require("uniqid"));
+import uniqid from "uniqid";
 const productsArray = [
     {
         image: require("../imgs/Players Handbook.png"),
@@ -11,7 +6,7 @@ const productsArray = [
         name: "Player's Handbook",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Dungeon Masters Guide.png"),
@@ -19,7 +14,7 @@ const productsArray = [
         name: "Dungeon Master's Guide",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Monster Manual.png"),
@@ -27,7 +22,7 @@ const productsArray = [
         name: "Monster Manual",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Sword Coast Adventurer's Guide.png"),
@@ -35,7 +30,7 @@ const productsArray = [
         name: "Sword Coast Adventurer’s Guide",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Volo's Guide to Monsters.png"),
@@ -43,7 +38,7 @@ const productsArray = [
         name: "Volo’s Guide to Monsters",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Xanathar's Guide to Everything.png"),
@@ -51,7 +46,7 @@ const productsArray = [
         name: "Xanathar's Guide to Everything",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Mordenkainen's Tome of Foes.png"),
@@ -59,7 +54,7 @@ const productsArray = [
         name: "Mordenkainen's Tome of Foes",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Wayfinder's Guide to Eberron.png"),
@@ -67,7 +62,7 @@ const productsArray = [
         name: "Wayfinder's Guide to Eberron",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Guildmaster's Guide to Ravnica.png"),
@@ -75,7 +70,7 @@ const productsArray = [
         name: "Guildmaster's Guide to Ravnica",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Acquisitions Incorporated.png"),
@@ -83,7 +78,7 @@ const productsArray = [
         name: "Acquisitions Incorporated",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Eberron: Rising from the Last War.png"),
@@ -91,7 +86,7 @@ const productsArray = [
         name: "Eberron: Rising from the Last War",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Explorer's Guide to Wildemount.png"),
@@ -99,7 +94,7 @@ const productsArray = [
         name: "Explorer's Guide to Wildemount",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Mythic Odysseys of Theros.png"),
@@ -107,7 +102,7 @@ const productsArray = [
         name: "Mythic Odysseys of Theros",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Mordenkainen's Fiendish Folio Volume 1.png"),
@@ -115,7 +110,7 @@ const productsArray = [
         name: "Mordenkainen's Fiendish Folio Volume 1",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/One Grung Above.png"),
@@ -123,7 +118,7 @@ const productsArray = [
         name: "One Grung Above",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/The Tortle Package.png"),
@@ -131,7 +126,7 @@ const productsArray = [
         name: "The Tortle Package",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Tasha's Cauldron of Everything.png"),
@@ -139,7 +134,7 @@ const productsArray = [
         name: "Tasha's Cauldron of Everything",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Van Richten's Guide to Ravenloft.png"),
@@ -147,7 +142,7 @@ const productsArray = [
         name: "Van Richten's Guide to Ravenloft",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Fizban's Treasury of Dragons.png"),
@@ -155,7 +150,7 @@ const productsArray = [
         name: "Fizban's Treasury of Dragons",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
     {
         image: require("../imgs/Strixhaven: A Curriculum of Chaos.png"),
@@ -163,7 +158,7 @@ const productsArray = [
         name: "Strixhaven: A Curriculum of Chaos",
         price: 29.99,
         quantity: 1,
-        id: (0, uniqid_1.default)(),
+        id: uniqid(),
     },
 ];
-exports.default = productsArray;
+export default productsArray;

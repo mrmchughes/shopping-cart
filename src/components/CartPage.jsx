@@ -1,9 +1,4 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
+import React from "react";
 function CartPage({ cart, totalPrice, incrementProduct, decrementProduct, checkout, }) {
     return (<div id="cartContainer" className="cartContainer">
       <p className="cartText">Your Shopping Cart</p>
@@ -31,4 +26,4 @@ function CartPage({ cart, totalPrice, incrementProduct, decrementProduct, checko
       </div>
     </div>);
 }
-exports.default = CartPage;
+export default CartPage;
