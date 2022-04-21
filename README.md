@@ -1,30 +1,33 @@
 <h1>Shopping Cart</h1>
 
-<p>I developed this React app as part of [The Odin Project's](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/shopping-cart) Fullstack curriculum. This project was another milestone for me, as it utilized react-router-dom.</p>
+I developed this React Shopping Cart app as part of The Odin Project's Fullstack [curriculum](https://www.theodinproject.com/courses/javascript/lessons/shopping-chart).
+  This project was another milestone for me, as it utilized react-router-dom, letting me build a website with multiple pages.
 
-<p>I developed a Shopping Cart for a fake store, with a Home Page, and a Store Page, to practice routing. On the top of both pages is a persistent Navbar, which allows for users to click a link and go to a different page. Additionally, the Navbar contains a button to toggle the visibility of the cart when clicked. On the Shop page, when a user clicks on a product, it is added to the cart, and the total quantity in the cart is updated in the Navbar. At the bottom of the cart is a fake checkout button, which alerts a message thanking the user for looking at the site.
-</p>
+On the top of the site is a persistent Navbar, which links to the pages of the website.
+
+On the Shop page, a user can add products to the cart. The total number of products in the Cart is displayed next to the link to the cart page in the Navbar.
+
+On the cart page, the products are displayed in a grid that adjusts dynamically as products are either added or removed from the cart. The quantity of each product is displayed next to the name, with two buttons to adjust the quantity as needed. If the quantity of a product is adjusted to 0, it is removed from the cart. At the bottom of the cart page is a div containing the total price of the products in the cart, and a fake checkout button, which displays an alerts thanking the user for looking at the site.
 
 ## Links
 
-- [Repo] https://github.com/mrmchughes/Memory-Card
+- [Repo] https://github.com/mrmchughes/shopping-cart
 
-- [Live] https://mrmchughes.github.io/Memory-Card/
+- [Live] https://mrmchughes.github.io/shopping-cart
 
 ## Screenshots
 
-[Main Page] ![image](https://user-images.githubusercontent.com/10659805/153058789-c29aa45f-28d7-4bbc-8905-9ebbfa880e4d.png)
+[Home Page] ![image](https://user-images.githubusercontent.com/10659805/159097693-6e252419-7476-4753-ac7d-f51518280d90.png)
+[Shop Page] ![image](https://user-images.githubusercontent.com/10659805/159097709-54bf2d1b-01e1-44ee-80e5-1947638fea64.png)
+[Cart Page] ![image](https://user-images.githubusercontent.com/10659805/159097750-688f50f5-4d92-4876-8a40-6810758fed87.png)
 
 ## Built With
 
-- HTML
-- CSS
-- JavaScript
-- React
-- React Hooks
-- react-router-dom
-- NPM
-- Webpack
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/npm/npm-original-wordmark.svg" title="npm" alt="npm" width="40" height="40"/>&nbsp;  
 
 ## Author
 
@@ -40,6 +43,10 @@ Give a ⭐️ if you like this project!
 
 # Credit
 
-The code for const shuffle was originally written by user ikmo at https://stackoverflow.com/questions/63540873/react-hooks-shuffle-array-immediately-on-load-and-onclick.
+The art for the products is taken from https://www.dndbeyond.com/.
 
-The art for the cards is taken from https://criticalrole.fandom.com/wiki/Critical_Role_Wiki.
+# License
+
+Copyright © 2022 [Michael Hughes](https://github.com/mrmchughes).
+
+This project is MIT licensed.
