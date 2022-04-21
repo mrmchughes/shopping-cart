@@ -1,19 +1,17 @@
 import uniqid from "uniqid";
-const importAll = (r) => {
-  let images = {};
-  r.keys().map((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-};
 
-const images = importAll(
-  require.context("/src/imgs", false, /\.(png|jpeg|svg)$/)
-);
+interface Product {
+  image: string;
+  alt: string;
+  name: string;
+  price: number;
+  quantity: number;
+  id: string;
+}
 
-const productsArray = [
+const productsArray: Product[] = [
   {
-    image: images["Players Handbook.jpeg"],
+    image: require("../imgs/Players Handbook.png"),
     alt: "Player's Handbook",
     name: "Player's Handbook",
     price: 29.99,
@@ -21,7 +19,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Dungeon Masters Guide.jpeg"],
+    image: require("../imgs/Dungeon Masters Guide.png"),
     alt: "Dungeon Master's Guide",
     name: "Dungeon Master's Guide",
     price: 29.99,
@@ -29,7 +27,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Monster Manual.jpeg"],
+    image: require("../imgs/Monster Manual.png"),
     alt: "Monster Manual",
     name: "Monster Manual",
     price: 29.99,
@@ -37,7 +35,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Sword Coast Adventurer's Guide.jpeg"],
+    image: require("../imgs/Sword Coast Adventurer's Guide.png"),
     alt: "Sword Coast Adventurer’s Guide",
     name: "Sword Coast Adventurer’s Guide",
     price: 29.99,
@@ -45,7 +43,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Volo's Guide to Monsters.jpeg"],
+    image: require("../imgs/Volo's Guide to Monsters.png"),
     alt: "Volo’s Guide to Monsters",
     name: "Volo’s Guide to Monsters",
     price: 29.99,
@@ -53,7 +51,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Xanathar's Guide to Everything.jpeg"],
+    image: require("../imgs/Xanathar's Guide to Everything.png"),
     alt: "Xanathar's Guide to Everything",
     name: "Xanathar's Guide to Everything",
     price: 29.99,
@@ -61,7 +59,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Mordenkainen's Tome of Foes.jpeg"],
+    image: require("../imgs/Mordenkainen's Tome of Foes.png"),
     alt: "Mordenkainen's Tome of Foes",
     name: "Mordenkainen's Tome of Foes",
     price: 29.99,
@@ -69,7 +67,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Wayfinder's Guide to Eberron.jpeg"],
+    image: require("../imgs/Wayfinder's Guide to Eberron.png"),
     alt: "Wayfinder's Guide to Eberron",
     name: "Wayfinder's Guide to Eberron",
     price: 29.99,
@@ -77,7 +75,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Guildmaster's Guide to Ravnica.jpeg"],
+    image: require("../imgs/Guildmaster's Guide to Ravnica.png"),
     alt: "Guildmaster's Guide to Ravnica",
     name: "Guildmaster's Guide to Ravnica",
     price: 29.99,
@@ -85,7 +83,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Acquisitions Incorporated.jpeg"],
+    image: require("../imgs/Acquisitions Incorporated.png"),
     alt: "Acquisitions Incorporated",
     name: "Acquisitions Incorporated",
     price: 29.99,
@@ -93,7 +91,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Eberron: Rising from the Last War.jpeg"],
+    image: require("../imgs/Eberron: Rising from the Last War.png"),
     alt: "Eberron: Rising from the Last War",
     name: "Eberron: Rising from the Last War",
     price: 29.99,
@@ -101,7 +99,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Explorer's Guide to Wildemount.jpeg"],
+    image: require("../imgs/Explorer's Guide to Wildemount.png"),
     alt: "Explorer's Guide to Wildemount",
     name: "Explorer's Guide to Wildemount",
     price: 29.99,
@@ -109,7 +107,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Mythic Odysseys of Theros.jpeg"],
+    image: require("../imgs/Mythic Odysseys of Theros.png"),
     alt: "Mythic Odysseys of Theros",
     name: "Mythic Odysseys of Theros",
     price: 29.99,
@@ -117,7 +115,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Mordenkainen's Fiendish Folio Volume 1.jpeg"],
+    image: require("../imgs/Mordenkainen's Fiendish Folio Volume 1.png"),
     alt: "Mordenkainen's Fiendish Folio Volume 1",
     name: "Mordenkainen's Fiendish Folio Volume 1",
     price: 29.99,
@@ -125,7 +123,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["One Grung Above.jpeg"],
+    image: require("../imgs/One Grung Above.png"),
     alt: "One Grung Above",
     name: "One Grung Above",
     price: 29.99,
@@ -133,7 +131,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["The Tortle Package.png"],
+    image: require("../imgs/The Tortle Package.png"),
     alt: "The Tortle Package",
     name: "The Tortle Package",
     price: 29.99,
@@ -141,7 +139,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Tasha's Cauldron of Everything.jpeg"],
+    image: require("../imgs/Tasha's Cauldron of Everything.png"),
     alt: "Tasha's Cauldron of Everything",
     name: "Tasha's Cauldron of Everything",
     price: 29.99,
@@ -149,7 +147,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Van Richten's Guide to Ravenloft.jpeg"],
+    image: require("../imgs/Van Richten's Guide to Ravenloft.png"),
     alt: "Van Richten's Guide to Ravenloft",
     name: "Van Richten's Guide to Ravenloft",
     price: 29.99,
@@ -157,7 +155,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Fizban's Treasury of Dragons.jpeg"],
+    image: require("../imgs/Fizban's Treasury of Dragons.png"),
     alt: "Fizban's Treasury of Dragons",
     name: "Fizban's Treasury of Dragons",
     price: 29.99,
@@ -165,7 +163,7 @@ const productsArray = [
     id: uniqid(),
   },
   {
-    image: images["Strixhaven: A Curriculum of Chaos.jpeg"],
+    image: require("../imgs/Strixhaven: A Curriculum of Chaos.png"),
     alt: "Strixhaven: A Curriculum of Chaos",
     name: "Strixhaven: A Curriculum of Chaos",
     price: 29.99,

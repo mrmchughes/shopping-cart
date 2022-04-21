@@ -7,10 +7,19 @@ import CartPage from "./components/CartPage";
 import productsArray from "./components/productsArray";
 import "./styles/global.css";
 
-const App = () => {
-  const [cart, setCart] = useState([]);
+function App() {
+  const [cart, setCart] = useState<Product[]>([]);
 
-  const incrementProduct = (product) => {
+  interface Product {
+    image: string;
+    alt: string;
+    name: string;
+    price: number;
+    quantity: number;
+    id: string;
+  }
+
+  const incrementProduct = (product: Product): void => {
     setCart(
       cart.map((x) =>
         x.id === product.id
@@ -23,7 +32,7 @@ const App = () => {
     );
   };
 
-  const decrementProduct = (product) => {
+  const decrementProduct = (product: Product): void => {
     if (product.quantity === 1) {
       setCart(cart.filter((x) => x !== product));
     } else {
@@ -41,16 +50,16 @@ const App = () => {
   };
 
   const cartLength = cart.reduce(
-    (total, product) => (total = total + product.quantity),
+    (total, product): number => (total += product.quantity),
     0
   );
 
   const totalPrice = cart.reduce(
-    (total, product) => total + product.quantity * product.price,
+    (total, product): number => total + product.quantity * product.price,
     0
   );
 
-  const addProductToCart = (product) => {
+  const addProductToCart = (product: Product): void => {
     const isItemInCart = cart.map((product) => product.id).includes(product.id);
 
     if (isItemInCart) {
@@ -60,7 +69,7 @@ const App = () => {
     }
   };
 
-  const checkout = () => {
+  const checkout = (): void => {
     alert("Thank you for checking out my Shopping Cart project!");
   };
 
@@ -68,9 +77,9 @@ const App = () => {
     <BrowserRouter>
       <NavBar cartLength={cartLength} />{" "}
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/shopping-cart" element={<HomePage />} />
         <Route
-          path="/shopPage"
+          path="/shopping-cart/shopPage"
           element={
             <ShopPage
               productsArray={productsArray}
@@ -79,7 +88,7 @@ const App = () => {
           }
         />
         <Route
-          path="/cartPage"
+          path="/shopping-cart/cartPage"
           element={
             <CartPage
               cart={cart}
@@ -92,11 +101,11 @@ const App = () => {
         />
         <Route
           path="*"
-          element={<p className="errorPage">There's nothing here!</p>}
+          element={<p className="errorPage">There is nothing here!</p>}
         />
       </Routes>
     </BrowserRouter>
   );
-};
+}
 
 export default App;

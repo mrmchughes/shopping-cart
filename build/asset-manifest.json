@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.8235b9b7.css",
+    "main.js": "/shopping-cart/static/js/main.7b7758d2.js",
+    "static/media/Explorer's Guide to Wildemount.png": "/shopping-cart/static/media/Explorer's Guide to Wildemount.c1f33cca2ac90c5b11bb.png",
+    "static/media/Mordenkainen's Fiendish Folio Volume 1.png": "/shopping-cart/static/media/Mordenkainen's Fiendish Folio Volume 1.d2808cd212e0b4d885d3.png",
+    "static/media/Mythic Odysseys of Theros.png": "/shopping-cart/static/media/Mythic Odysseys of Theros.d5e13d07f73200c82bfa.png",
+    "static/media/Monster Manual.png": "/shopping-cart/static/media/Monster Manual.7e6a5a3e6b15f5b751e7.png",
+    "static/media/Wayfinder's Guide to Eberron.png": "/shopping-cart/static/media/Wayfinder's Guide to Eberron.b283a584c70bf50c34e8.png",
+    "static/media/Strixhaven: A Curriculum of Chaos.png": "/shopping-cart/static/media/Strixhaven: A Curriculum of Chaos.b8b8845365316c9bc609.png",
+    "static/media/Eberron: Rising from the Last War.png": "/shopping-cart/static/media/Eberron: Rising from the Last War.5854dae9b404cde3b379.png",
+    "static/media/One Grung Above.png": "/shopping-cart/static/media/One Grung Above.12cf4dd1c011bbdf089c.png",
+    "static/media/Guildmaster's Guide to Ravnica.png": "/shopping-cart/static/media/Guildmaster's Guide to Ravnica.5ea617163772cc0503b7.png",
+    "static/media/Mordenkainen's Tome of Foes.png": "/shopping-cart/static/media/Mordenkainen's Tome of Foes.df3a34c1f5fb89c1aa7e.png",
+    "static/media/Players Handbook.png": "/shopping-cart/static/media/Players Handbook.52c4726f3da9cde0c81d.png",
+    "static/media/Xanathar's Guide to Everything.png": "/shopping-cart/static/media/Xanathar's Guide to Everything.b4af1eb085f70b856439.png",
+    "static/media/Dungeon Masters Guide.png": "/shopping-cart/static/media/Dungeon Masters Guide.a03648ddbcd15027766b.png",
+    "static/media/Sword Coast Adventurer's Guide.png": "/shopping-cart/static/media/Sword Coast Adventurer's Guide.78bdac4c63e3baae7922.png",
+    "static/media/Volo's Guide to Monsters.png": "/shopping-cart/static/media/Volo's Guide to Monsters.410fb137aca7f549f90d.png",
+    "static/media/Van Richten's Guide to Ravenloft.png": "/shopping-cart/static/media/Van Richten's Guide to Ravenloft.19ed6b4853c7dd25cef8.png",
+    "static/media/Fizban's Treasury of Dragons.png": "/shopping-cart/static/media/Fizban's Treasury of Dragons.a5385365071c127c0d94.png",
+    "static/media/Tasha's Cauldron of Everything.png": "/shopping-cart/static/media/Tasha's Cauldron of Everything.4bf3b64ed5766c30d36a.png",
+    "static/media/Acquisitions Incorporated.png": "/shopping-cart/static/media/Acquisitions Incorporated.64f9c333130bf9224a23.png",
+    "static/media/The Tortle Package.png": "/shopping-cart/static/media/The Tortle Package.a294d0a1e471ed723697.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.8235b9b7.css.map": "/shopping-cart/static/css/main.8235b9b7.css.map",
+    "main.7b7758d2.js.map": "/shopping-cart/static/js/main.7b7758d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8235b9b7.css",
+    "static/js/main.7b7758d2.js"
+  ]
+}

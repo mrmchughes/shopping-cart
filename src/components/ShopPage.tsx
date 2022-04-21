@@ -1,15 +1,27 @@
 import React from "react";
 import { BsCartPlus } from "react-icons/bs";
 
-const ShopPage = (props) => {
-  const { productsArray, addProductToCart } = props;
+interface Product {
+  image: string;
+  alt: string;
+  name: string;
+  price: number;
+  quantity: number;
+  id: string;
+}
 
+interface ShopPageProps {
+  productsArray: Product[];
+  addProductToCart: (product: Product) => void;
+}
+
+const ShopPage = ({ productsArray, addProductToCart }: ShopPageProps) => {
   return (
     <div className="shopPageContainer">
       {productsArray.map((product) => {
         return (
           <div className="card" key={product.id}>
-            <img src={product.image} alt={product.alt}></img>
+            <img src={product.image} alt={product.alt} />
 
             <p className="productText">{product.name}</p>
             <p className="productText">${product.price}</p>
