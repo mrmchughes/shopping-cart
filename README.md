@@ -17,9 +17,9 @@ On the cart page, the products are displayed in a grid that adjusts dynamically 
 
 ## Screenshots
 
-[Home Page] ![image](https://user-images.githubusercontent.com/10659805/159097693-6e252419-7476-4753-ac7d-f51518280d90.png)
-[Shop Page] ![image](https://user-images.githubusercontent.com/10659805/159097709-54bf2d1b-01e1-44ee-80e5-1947638fea64.png)
-[Cart Page] ![image](https://user-images.githubusercontent.com/10659805/159097750-688f50f5-4d92-4876-8a40-6810758fed87.png)
+[Home Page] ![image](https://user-images.githubusercontent.com/10659805/164803316-a79614d7-4aa1-4162-821c-26929960a549.png)
+[Shop Page] ![image](https://user-images.githubusercontent.com/10659805/164803283-17f48e5d-c2cd-4a71-b931-6778d206e1e1.png)
+[Cart Page] ![image](https://user-images.githubusercontent.com/10659805/164803393-e32cdf68-8ab1-4305-bc92-0597f5403c05.png)
 
 ## Built With
 
