@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.8235b9b7.css",
-    "main.js": "/shopping-cart/static/js/main.7b7758d2.js",
+    "main.css": "/shopping-cart/static/css/main.fd562efa.css",
+    "main.js": "/shopping-cart/static/js/main.22baba4d.js",
     "static/media/Explorer's Guide to Wildemount.png": "/shopping-cart/static/media/Explorer's Guide to Wildemount.c1f33cca2ac90c5b11bb.png",
     "static/media/Mordenkainen's Fiendish Folio Volume 1.png": "/shopping-cart/static/media/Mordenkainen's Fiendish Folio Volume 1.d2808cd212e0b4d885d3.png",
     "static/media/Mythic Odysseys of Theros.png": "/shopping-cart/static/media/Mythic Odysseys of Theros.d5e13d07f73200c82bfa.png",
@@ -23,11 +23,11 @@
     "static/media/Acquisitions Incorporated.png": "/shopping-cart/static/media/Acquisitions Incorporated.64f9c333130bf9224a23.png",
     "static/media/The Tortle Package.png": "/shopping-cart/static/media/The Tortle Package.a294d0a1e471ed723697.png",
     "index.html": "/shopping-cart/index.html",
-    "main.8235b9b7.css.map": "/shopping-cart/static/css/main.8235b9b7.css.map",
-    "main.7b7758d2.js.map": "/shopping-cart/static/js/main.7b7758d2.js.map"
+    "main.fd562efa.css.map": "/shopping-cart/static/css/main.fd562efa.css.map",
+    "main.22baba4d.js.map": "/shopping-cart/static/js/main.22baba4d.js.map"
   },
   "entrypoints": [
-    "static/css/main.8235b9b7.css",
-    "static/js/main.7b7758d2.js"
+    "static/css/main.fd562efa.css",
+    "static/js/main.22baba4d.js"
   ]
 }

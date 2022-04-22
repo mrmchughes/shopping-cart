@@ -101,7 +101,11 @@ function App() {
         />
         <Route
           path="*"
-          element={<p className="errorPage">There is nothing here!</p>}
+          element={
+            <p className="flex justify-center text-4xl">
+              There is nothing here!
+            </p>
+          }
         />
       </Routes>
     </BrowserRouter>
