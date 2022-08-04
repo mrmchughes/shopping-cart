@@ -1,19 +1,11 @@
 <h1>Shopping Cart</h1>
 
+A E-Commerce site built using TypeScript and Tailwind CSS. 
+
 I developed this React Shopping Cart app as part of The Odin Project's Fullstack [curriculum](https://www.theodinproject.com/courses/javascript/lessons/shopping-chart).
   This project was another milestone for me, as it utilized react-router-dom, letting me build a website with multiple pages.
 
-On the top of the site is a persistent Navbar, which links to the pages of the website.
-
-On the Shop page, a user can add products to the cart. The total number of products in the Cart is displayed next to the link to the cart page in the Navbar.
-
-On the cart page, the products are displayed in a grid that adjusts dynamically as products are either added or removed from the cart. The quantity of each product is displayed next to the name, with two buttons to adjust the quantity as needed. If the quantity of a product is adjusted to 0, it is removed from the cart. At the bottom of the cart page is a div containing the total price of the products in the cart, and a fake checkout button, which displays an alerts thanking the user for looking at the site.
-
-## Links
-
-- [Repo] https://github.com/mrmchughes/shopping-cart
-
-- [Live] https://mrmchughes.github.io/shopping-cart
+[Live Demo](https://mrmchughes.github.io/shopping-cart)
 
 ## Screenshots
 
@@ -28,8 +20,6 @@ On the cart page, the products are displayed in a grid that adjusts dynamically 
   <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/npm/npm-original-wordmark.svg" title="npm" alt="npm" width="40" height="40"/>&nbsp; <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-original-wordmark.svg" title="npm" alt="npm" width="40" height="40"/>&nbsp; <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="npm" alt="npm" width="40" height="40"/>&nbsp;  
-  
-   
   
 ## Author
 
